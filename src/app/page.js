@@ -19,7 +19,7 @@ export default function Home() {
               bringing the whole gospel to the whole world.
             </Subtitle>
 
-            <ButtonSecondary className="text-white mr-5">
+            <ButtonSecondary className="text-white mr-5 mb-3 lg:mb-0">
               <Link href="/location">Join our church</Link>
             </ButtonSecondary>
 

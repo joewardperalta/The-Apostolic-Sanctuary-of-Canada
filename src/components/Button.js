@@ -1,6 +1,10 @@
 export function Button({ children, className = "" }) {
   return (
-    <button className={"font-semibold p-2 px-6 rounded-md" + " " + className}>
+    <button
+      className={
+        "font-semibold p-2 px-6 rounded-md w-full md:w-fit " + className
+      }
+    >
       {children}
     </button>
   );

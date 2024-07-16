@@ -44,8 +44,8 @@ export default function Header() {
 
   useEffect(() => {
     // Add active class on the first nav item
-    // const navItems = document.querySelectorAll(".nav-item");
-    // navItems[0].classList.add("active");
+    const navItems = document.querySelectorAll(".nav-item");
+    navItems[0].classList.add("active");
   });
 
   return (

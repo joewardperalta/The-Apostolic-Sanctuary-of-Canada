@@ -50,9 +50,9 @@ export default function Header() {
 
   return (
     <header>
-      <Navbar className="bg-white fixed w-full h-full">
-        <Container>
-          <NavbarBrand className="mb-10">
+      <Navbar className="bg-white fixed w-full h-full lg:h-fit">
+        <Container className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
+          <NavbarBrand className="mb-10 lg:mb-0">
             <Link href="/">
               <div className="bg-white w-fit p-2 rounded-lg">
                 <Image
@@ -64,17 +64,26 @@ export default function Header() {
               </div>
             </Link>
           </NavbarBrand>
-          <Nav className="h-full space-y-1">
+          <Nav className="h-full space-y-1 lg:space-y-0 lg:flex lg:gap-4 lg:font-medium">
             {navItems.map((item, index) => (
               <NavItem key={index}>
-                <NavLink className="flex items-center gap-4" href={item.href}>
-                  <Image src={item.src} width={28} height={28} alt="Home" />
+                <NavLink
+                  className="flex items-center gap-4 lg:block lg:gap-0 lg:px-4"
+                  href={item.href}
+                >
+                  <Image
+                    className="lg:hidden"
+                    src={item.src}
+                    width={28}
+                    height={28}
+                    alt="Home"
+                  />
                   <span>{item.text}</span>
                 </NavLink>
               </NavItem>
             ))}
           </Nav>
-          <Button className="font-semibold p-2 flex items-center gap-4 w-full">
+          <Button className="font-semibold p-2 flex items-center gap-4 w-full lg:w-fit">
             <Image
               src="/user-circle.svg"
               width={28}

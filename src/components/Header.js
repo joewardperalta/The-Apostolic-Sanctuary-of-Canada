@@ -7,88 +7,71 @@ import {
   Nav,
   NavItem,
   NavLink,
+  HamburgerButton,
 } from "@/components/Navbar";
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect } from "react";
-import { Button } from "./Button";
+import { Button, ButtonPrimary, ButtonSecondary } from "./Button";
 
 export default function Header() {
   const navItems = [
     {
       text: "Home",
       href: "/",
-      src: "/icons/home.svg",
     },
     {
       text: "About",
       href: "/about",
-      src: "/icons/user-group.svg",
     },
     {
       text: "Services",
       href: "/services",
-      src: "/icons/open-book.svg",
     },
     {
       text: "Events",
       href: "/events",
-      src: "/icons/calendar-days.svg",
     },
     {
       text: "Location",
       href: "/location",
-      src: "/icons/map-pin.svg",
+    },
+    {
+      text: "Login",
+      href: "/login",
     },
   ];
 
   useEffect(() => {
     // Add active class on the first nav item
-    const navItems = document.querySelectorAll(".nav-item");
-    navItems[0].classList.add("active");
+    // const navItems = document.querySelectorAll(".nav-item");
+    // navItems[0].classList.add("active");
   });
 
   return (
     <Navbar>
-      <Container className="flex flex-col lg:flex-row lg:justify-between lg:items-center">
-        <NavbarBrand>
-          <Link href="/">
-            <div className="bg-white w-fit p-2 rounded-lg">
+      <Container className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
+        <div className="navbar-brand-wrapper flex items-center justify-between">
+          <NavbarBrand>
+            <Link href="/">
               <Image
                 src="/church-logo.png"
                 width={130}
                 height={130}
-                alt="user circle"
+                alt="church logo"
               ></Image>
-            </div>
-          </Link>
-        </NavbarBrand>
+            </Link>
+          </NavbarBrand>
+          <HamburgerButton></HamburgerButton>
+        </div>
+
         <Nav>
-          {navItems.map((item, index) => (
-            <NavItem key={index}>
-              <NavLink href={item.href}>
-                <Image
-                  className="lg:hidden"
-                  src={item.src}
-                  width={28}
-                  height={28}
-                  alt="Home"
-                />
-                <span>{item.text}</span>
-              </NavLink>
+          {navItems.map((item) => (
+            <NavItem key={item.text}>
+              <NavLink href={item.href}>{item.text}</NavLink>
             </NavItem>
           ))}
         </Nav>
-
-        <Button className="flex items-center gap-4 w-full bg-transparent text-black lg:w-fit">
-          <Image
-            src="/icons/user-circle.svg"
-            width={28}
-            height={28}
-            alt="user circle"
-          ></Image>
-          Login
-        </Button>
       </Container>
     </Navbar>
   );

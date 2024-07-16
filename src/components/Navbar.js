@@ -2,32 +2,21 @@ import Link from "next/link";
 
 export function Navbar({ children, className = "" }) {
   return (
-    <nav
-      className={
-        "navbar py-5 lg:py-2 bg-white fixed w-full h-full lg:h-fit lg:relative" +
-        " " +
-        className
-      }
-    >
+    <nav className={"navbar fixed right-0 py-3 w-full bg-white" + className}>
       {children}
     </nav>
   );
 }
 
 export function NavbarBrand({ children, href, className = "" }) {
-  return (
-    <div className={"navbar-brand mb-10 lg:mb-0" + " " + className}>
-      {children}
-    </div>
-  );
+  return <div className={"navbar-brand" + " " + className}>{children}</div>;
 }
 
 export function Nav({ children, className = "" }) {
   return (
     <ul
       className={
-        "nav font-semibold h-full space-y-1 lg:space-y-0 lg:flex lg:gap-4 lg:font-medium" +
-        " " +
+        "nav fixed w-full bg-white left-full flex flex-col items-center justify-center h-full text-2xl font-medium gap-3 transition-all duration-1000 lg:relative lg:left-0 lg:flex-row lg:w-fit lg:text-base " +
         className
       }
     >
@@ -56,5 +45,37 @@ export function NavLink({ children, href, className = "" }) {
     >
       {children}
     </Link>
+  );
+}
+
+export function HamburgerButton({ className, onClick }) {
+  function handleHamburgerButtonClick() {
+    const nav = document.querySelector(".nav");
+    nav.classList.toggle("left-full");
+    nav.classList.toggle("left-0");
+
+    const hamburgerButton = document.querySelector(".hamburger-button");
+    hamburgerButton.classList.toggle("bg-black");
+
+    const hamburgerPieces = document.querySelectorAll(".hamburger-button div");
+    console.log(hamburgerPieces);
+    hamburgerPieces.forEach((piece) => {
+      piece.classList.toggle("bg-black");
+      piece.classList.toggle("bg-white");
+    });
+  }
+
+  return (
+    <button
+      className={
+        "hamburger-button flex flex-col gap-1 w-10 z-10 p-2 rounded-md transition-all duration-1000 lg:hidden " +
+        className
+      }
+      onClick={handleHamburgerButtonClick}
+    >
+      <div className="w-full h-1 bg-black rounded-full"></div>
+      <div className="w-full h-1 bg-black rounded-full"></div>
+      <div className="w-full h-1 bg-black rounded-full"></div>
+    </button>
   );
 }

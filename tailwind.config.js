@@ -14,6 +14,30 @@ module.exports = {
         "pastor-pointing":
           "linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.8)), url('/images/pastor-pointing.png')",
       },
+
+      keyframes: {
+        slide_right_to_left: {
+          from: {
+            left: "100%",
+          },
+          to: {
+            left: "0",
+          },
+        },
+        slide_left_to_right: {
+          from: {
+            left: "0",
+          },
+          to: {
+            left: "100%",
+          },
+        },
+      },
+
+      animation: {
+        slide_right_to_left: "slide_right_to_left 1s ease-in-out",
+        slide_left_to_right: "slide_left_to_right 1s ease-in-out",
+      },
     },
   },
   plugins: [],

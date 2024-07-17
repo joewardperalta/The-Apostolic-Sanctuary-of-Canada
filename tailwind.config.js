@@ -38,6 +38,10 @@ module.exports = {
         slide_right_to_left: "slide_right_to_left 1s ease-in-out",
         slide_left_to_right: "slide_left_to_right 1s ease-in-out",
       },
+
+      textColor: {
+        "white-smoke": "#f5f5f5",
+      },
     },
   },
   plugins: [],

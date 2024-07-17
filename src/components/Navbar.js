@@ -16,7 +16,7 @@ export function Nav({ children, className = "" }) {
   return (
     <ul
       className={
-        "nav fixed w-full bg-white left-full flex flex-col items-center justify-center h-full text-2xl font-medium gap-3 transition-all duration-1000 lg:relative lg:left-0 lg:flex-row lg:w-fit lg:text-base " +
+        "nav fixed w-full left-full flex flex-col items-center justify-center h-full text-2xl font-medium gap-3 transition-all duration-1000 lg:relative lg:left-0 lg:flex-row lg:w-fit lg:text-base " +
         className
       }
     >

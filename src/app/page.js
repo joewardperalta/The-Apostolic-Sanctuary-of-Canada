@@ -71,11 +71,11 @@ export default function Home() {
   return (
     <main>
       <Section
-        className="bg-pastor-pointing bg-top bg-cover min-h-[45rem]"
+        className="bg-pastor-pointing bg-top bg-cover"
         id="#hero-section"
       >
         <Container>
-          <div className="max-w-[35rem] pt-80">
+          <div className="max-w-[35rem] pt-80 pb-16">
             <Title className="text-white">Oneness Apostolic</Title>
 
             <Subtitle className="text-white mb-12">

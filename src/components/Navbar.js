@@ -2,7 +2,9 @@ import Link from "next/link";
 
 export function Navbar({ children, className = "" }) {
   return (
-    <nav className={"navbar fixed right-0 py-3 w-full bg-white" + className}>
+    <nav
+      className={"navbar sticky left-0 top-0 py-3 w-full bg-white" + className}
+    >
       {children}
     </nav>
   );

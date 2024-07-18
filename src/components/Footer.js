@@ -8,7 +8,7 @@ export default function Footer() {
   const socials = [
     {
       name: "Facebook",
-      href: "/",
+      href: "https://www.facebook.com/apostolicsanctuarycanada",
       img: {
         src: "/icons/facebook.svg",
         alt: "Facebook",
@@ -16,7 +16,7 @@ export default function Footer() {
     },
     {
       name: "Youtube",
-      href: "/",
+      href: "https://www.youtube.com/@theapostolicsanctuaryofcan4004",
       img: {
         src: "/icons/youtube.svg",
         alt: "Youtube",
@@ -24,7 +24,7 @@ export default function Footer() {
     },
     {
       name: "Gmail",
-      href: "/",
+      href: "mailto:myapostolicsanctuary@gmail.com",
       img: {
         src: "/icons/google-plus.svg",
         alt: "Gmail",

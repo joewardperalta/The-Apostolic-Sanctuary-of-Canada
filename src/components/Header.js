@@ -36,17 +36,19 @@ export default function Header() {
       text: "Location",
       href: "/location",
     },
-    {
-      text: "Login",
-      href: "/login",
-    },
   ];
 
   useEffect(() => {
     // Add active class on the first nav item
-    const navItems = document.querySelectorAll(".nav-item");
-    navItems[0].classList.add("active");
+    const navLinks = document.querySelectorAll(".nav-link");
+    navLinks[0].classList.add("active");
   });
+
+  function handleNavLinkClick(e) {
+    const navLinks = document.querySelectorAll(".nav-link");
+    navLinks.forEach((link) => link.classList.remove("active"));
+    e.target.classList.add("active");
+  }
 
   return (
     <Navbar>
@@ -68,7 +70,9 @@ export default function Header() {
         <Nav>
           {navItems.map((item) => (
             <NavItem key={item.text}>
-              <NavLink href={item.href}>{item.text}</NavLink>
+              <NavLink href={item.href} onClick={handleNavLinkClick}>
+                {item.text}
+              </NavLink>
             </NavItem>
           ))}
         </Nav>

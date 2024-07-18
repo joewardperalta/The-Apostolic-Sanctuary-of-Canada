@@ -6,12 +6,12 @@ export function Card({ children, className }) {
 
 export function CardImage({ src, alt }) {
   return (
-    <div className="card-image mb-8 bg-[#333] rounded-md">
+    <div className="card-image mb-8 rounded-md">
       <Image
         className="w-full h-full rounded-md"
         src={src}
-        width={300}
-        height={300}
+        width={2000}
+        height={2000}
         alt={alt}
       ></Image>
     </div>

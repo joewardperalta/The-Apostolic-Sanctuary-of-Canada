@@ -3,7 +3,9 @@ import Link from "next/link";
 export function Navbar({ children, className = "" }) {
   return (
     <nav
-      className={"navbar sticky left-0 top-0 py-3 w-full bg-white" + className}
+      className={
+        "navbar sticky left-0 top-0 py-3 w-full bg-white z-10 " + className
+      }
     >
       {children}
     </nav>
@@ -35,15 +37,15 @@ export function NavItem({ children, className = "" }) {
   );
 }
 
-export function NavLink({ children, href, className = "" }) {
+export function NavLink({ children, href, className = "", onClick }) {
   return (
     <Link
       className={
-        "nav-link p-2 flex items-center gap-4 lg:block lg:gap-0 lg:px-4" +
-        " " +
+        "nav-link p-2 flex items-center gap-4 transition-all duration-1000 lg:block lg:gap-0 lg:px-4 " +
         className
       }
       href={href}
+      onClick={(e) => onClick(e)}
     >
       {children}
     </Link>

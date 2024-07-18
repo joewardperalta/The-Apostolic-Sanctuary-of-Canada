@@ -1,9 +1,10 @@
 import { Heading, Subtitle, Title } from "@/components/Typography";
 import Container from "@/components/Container";
-import { ButtonPrimary, ButtonSecondary } from "@/components/Button";
+import { ButtonSecondary } from "@/components/Button";
 import Link from "next/link";
 import Section from "@/components/Section";
 import { Card, CardDescription, CardImage, CardTitle } from "@/components/Card";
+import Image from "next/image";
 
 export default function Home() {
   const departments = [
@@ -11,7 +12,7 @@ export default function Home() {
       title: "Kids",
       desc: "Our church is dedicated to teaching our little ones the truth about Jesus Christ. They are taught the basic principles of the bible.",
       img: {
-        src: "",
+        src: "/images/IMG_0468.png",
         alt: "Kids Department",
       },
     },
@@ -19,7 +20,7 @@ export default function Home() {
       title: "Youth",
       desc: "Join our youth department as they embark on their journey toward the truth, to learn more about Jesus Christ.",
       img: {
-        src: "",
+        src: "/images/IMG_0477.png",
         alt: "Youth Department",
       },
     },
@@ -27,7 +28,7 @@ export default function Home() {
       title: "Ladies",
       desc: "Come and have fellowship with our ladies' department to help the family serve God.",
       img: {
-        src: "",
+        src: "/images/IMG_0473.png",
         alt: "Ladies Department",
       },
     },
@@ -35,7 +36,7 @@ export default function Home() {
       title: "Mens",
       desc: "Be a part of our men's department as they lead, guide, and teach the youth and childrens to be faithful to God.",
       img: {
-        src: "",
+        src: "/images/IMG_0470.png",
         alt: "Mens Department",
       },
     },
@@ -46,7 +47,7 @@ export default function Home() {
       title: "Edwin and Ruth Fernan",
       desc: "Bishop & First Lady",
       img: {
-        src: "",
+        src: "/images/bishop.jpg",
         alt: "Edwin and Ruth Fernan",
       },
     },
@@ -54,7 +55,7 @@ export default function Home() {
       title: "John David Fernan",
       desc: "Senior Pastor",
       img: {
-        src: "",
+        src: "/images/pastor-david.jpg",
         alt: "John David Fernan",
       },
     },
@@ -62,7 +63,7 @@ export default function Home() {
       title: "John Paul Tan",
       desc: "Pastor",
       img: {
-        src: "",
+        src: "/images/pastor-paul.jpg",
         alt: "John Paul Tan",
       },
     },
@@ -75,7 +76,7 @@ export default function Home() {
         id="#hero-section"
       >
         <Container>
-          <div className="max-w-[35rem] pt-80 pb-16">
+          <div className="max-w-[35rem] pt-52 pb-16">
             <Title className="text-white">Oneness Apostolic</Title>
 
             <Subtitle className="text-white mb-12">
@@ -88,7 +89,7 @@ export default function Home() {
             </ButtonSecondary>
 
             <ButtonSecondary>
-              <Link href="/about">Learn about us</Link>
+              <Link href="/about">Learn who we are</Link>
             </ButtonSecondary>
           </div>
         </Container>
@@ -96,9 +97,7 @@ export default function Home() {
 
       <Section id="#about-section">
         <Container>
-          <div className="w-full">
-            <Heading className="text-[#333]">Learn about us</Heading>
-          </div>
+          <Heading className="text-[#333]">Learn about us</Heading>
 
           <div className="max-w-[50rem] mb-10">
             <p className="text-[#333]">
@@ -112,9 +111,33 @@ export default function Home() {
           </div>
 
           <div className="flex gap-3 flex-col md:flex-row">
-            <div className="w-full h-80 bg-[#333] rounded-md"></div>
-            <div className="w-full h-80 bg-[#333] rounded-md"></div>
-            <div className="w-full h-80 bg-[#333] rounded-md"></div>
+            <div className="w-full h-80 bg-[#333] rounded-md overflow-hidden">
+              <Image
+                className="h-full object-cover"
+                src="/images/IMG_0460.png"
+                width={2000}
+                height={2000}
+                alt="Church Congregation"
+              />
+            </div>
+            <div className="w-full h-80 bg-[#333] rounded-md overflow-hidden">
+              <Image
+                className="h-full object-cover"
+                src="/images/IMG_0462.png"
+                width={2000}
+                height={2000}
+                alt="Church Congregation"
+              />
+            </div>
+            <div className="w-full h-80 bg-[#333] rounded-md overflow-hidden">
+              <Image
+                className="h-full object-cover"
+                src="/images/419885993_681986480775594_9056033824979247708_n.jpg"
+                width={2000}
+                height={2000}
+                alt="Church Congregation"
+              />
+            </div>
           </div>
         </Container>
       </Section>
@@ -133,10 +156,10 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-3 md:grid-cols-2">
             {departments.map((department, index) => (
               <Card key={index}>
-                <CardImage src={department.src} alt={department.alt} />
+                <CardImage src={department.img.src} alt={department.alt} />
                 <CardTitle>{department.title}</CardTitle>
                 <CardDescription>{department.desc}</CardDescription>
               </Card>
@@ -145,7 +168,16 @@ export default function Home() {
         </Container>
       </Section>
 
-      <Section className="bg-[#333] py-36">
+      <Section className="py-36 relative bg-gradient-to-t from-black/80 to-black/20">
+        <div className="absolute top-0 h-full -z-10 ">
+          <Image
+            className="object-cover h-full"
+            src="/images/praise-and-worship-1.jpg"
+            width={2000}
+            height={2000}
+            alt="sunday worship"
+          />
+        </div>
         <Container className="text-center">
           <div className="max-w-[50rem] mx-auto mb-10">
             <Heading>Join our upcoming church services</Heading>
@@ -194,7 +226,7 @@ export default function Home() {
           <div className="grid gap-3 grid-cols-1 md:grid-cols-3">
             {pastors.map((department, index) => (
               <Card key={index}>
-                <CardImage src={department.src} alt={department.alt} />
+                <CardImage src={department.img.src} alt={department.alt} />
                 <CardTitle>{department.title}</CardTitle>
                 <CardDescription>{department.desc}</CardDescription>
               </Card>

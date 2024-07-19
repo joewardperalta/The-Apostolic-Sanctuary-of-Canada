@@ -17,6 +17,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/images/church-logo.png" sizes="any" />
+      </head>
       <body className={poppins.className}>{children}</body>
     </html>
   );

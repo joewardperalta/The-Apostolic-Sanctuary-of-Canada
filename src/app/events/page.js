@@ -19,6 +19,7 @@ export default function Events() {
             </Subtitle>
           </Container>
         </Section>
+
         <Section className="pt-0">
           <Container className="flex justify-center">
             <div className="max-w-96 text-center flex items-center flex-col">

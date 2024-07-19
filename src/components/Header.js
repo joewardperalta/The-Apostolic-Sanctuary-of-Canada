@@ -31,10 +31,6 @@ export default function Header() {
       href: "/events",
     },
     {
-      text: "Location",
-      href: "/location",
-    },
-    {
       text: "Contact",
       href: "/contact",
     },

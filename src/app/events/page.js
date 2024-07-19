@@ -7,9 +7,9 @@ export default function Events() {
   return (
     <>
       <Section className="space-y-10">
-        <Container className="text-center mb-12">
+        <Container className="text-center mb-12 flex items-center flex-col">
           <Title className="text-[#333]">Upcoming Events</Title>
-          <Subtitle className="text-[#333]">
+          <Subtitle className="text-[#333] max-w-[35rem]">
             Please check our upcoming events and save a date to your calendars.
           </Subtitle>
         </Container>

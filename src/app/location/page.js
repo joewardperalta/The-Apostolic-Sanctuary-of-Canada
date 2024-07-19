@@ -7,9 +7,9 @@ export default function Location() {
   return (
     <>
       <Section className="space-y-10">
-        <Container className="text-center">
+        <Container className="flex flex-col items-center text-center">
           <Title className="text-[#333]">Church Location</Title>
-          <Subtitle className="text-[#333]">
+          <Subtitle className="text-[#333] max-w-[35rem]">
             We are located on 1177 Finch Ave West Unit 3. Look for The Apostolic
             Sanctuary of Canada.
           </Subtitle>

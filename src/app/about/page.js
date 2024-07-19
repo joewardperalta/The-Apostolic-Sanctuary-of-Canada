@@ -62,7 +62,7 @@ export default function About() {
               <div className="hidden w-[18rem] rounded-md overflow-hidden h-[22rem] -ml-14 mt-12 lg:block">
                 <Image
                   className="h-full object-cover"
-                  src="/images/IMG_0157.png"
+                  src="/images/IMG_3756.png"
                   width={2000}
                   height={2000}
                   alt="Pastor preaching"
@@ -97,7 +97,7 @@ export default function About() {
               <div className="hidden w-[18rem] rounded-md overflow-hidden h-[22rem] mt-10 lg:block">
                 <Image
                   className="h-full object-cover"
-                  src="/images/IMG_0157.png"
+                  src="/images/IMG_0161.png"
                   width={2000}
                   height={2000}
                   alt="Pastor preaching"
@@ -106,7 +106,7 @@ export default function About() {
               <div className="hidden w-[18rem] rounded-md overflow-hidden h-[22rem] -ml-14 lg:block">
                 <Image
                   className="h-full object-cover"
-                  src="/images/IMG_0157.png"
+                  src="/images/IMG_3760.png"
                   width={2000}
                   height={2000}
                   alt="Pastor preaching"
@@ -135,7 +135,7 @@ export default function About() {
               <div className="hidden w-[18rem] rounded-md overflow-hidden h-[22rem] lg:block">
                 <Image
                   className="h-full object-cover"
-                  src="/images/IMG_0157.png"
+                  src="/images/IMG_0483.png"
                   width={2000}
                   height={2000}
                   alt="Pastor preaching"
@@ -144,7 +144,7 @@ export default function About() {
               <div className="hidden w-[18rem] rounded-md overflow-hidden h-[22rem] -ml-14 mt-10 lg:block">
                 <Image
                   className="h-full object-cover"
-                  src="/images/IMG_0157.png"
+                  src="/images/IMG_0472.png"
                   width={2000}
                   height={2000}
                   alt="Pastor preaching"

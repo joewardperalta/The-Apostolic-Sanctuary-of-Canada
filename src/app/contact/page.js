@@ -23,7 +23,7 @@ export default function Contact() {
           </Container>
         </Section>
 
-        <Container className="flex gap-16 flex-col lg:flex-row">
+        <Container className="flex flex-col lg:flex-row lg:gap-16">
           <Section className="pt-0 w-full">
             <div className="w-full">
               <form className="space-y-7 text-[#333]">
@@ -117,9 +117,9 @@ export default function Contact() {
                 ></Image>
                 <Link
                   className="text-[#333] border-b-2 border-[#333] font-semibold flex"
-                  href="(555) 000-0000"
+                  href="tel:416-421-0994"
                 >
-                  +(555) 000-0000
+                  (416) 421-0994
                 </Link>
               </div>
             </div>
@@ -133,7 +133,7 @@ export default function Contact() {
               </p>
               <div className="flex gap-3">
                 <Image
-                  src="/icons/phone.svg"
+                  src="/icons/map-pin.svg"
                   width={24}
                   height={24}
                   alt="phone"

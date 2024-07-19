@@ -12,17 +12,12 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect } from "react";
-import { Button, ButtonPrimary, ButtonSecondary } from "./Button";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
   const path = usePathname();
 
   const navItems = [
-    {
-      text: "Home",
-      href: "/",
-    },
     {
       text: "About",
       href: "/about",
@@ -38,6 +33,10 @@ export default function Header() {
     {
       text: "Location",
       href: "/location",
+    },
+    {
+      text: "Contact",
+      href: "/contact",
     },
   ];
 

@@ -54,12 +54,29 @@ export function NavLink({ children, href, className = "", onClick, id }) {
 }
 
 export function HamburgerButton({ className }) {
+  function handleHamburgerButtonClick() {
+    const nav = document.querySelector(".nav");
+    nav.classList.toggle("left-full");
+    nav.classList.toggle("left-0");
+
+    const hamburgerButton = document.querySelector(".hamburger-button");
+    hamburgerButton.classList.toggle("bg-black");
+
+    const hamburgerPieces = document.querySelectorAll(".hamburger-button div");
+    console.log(hamburgerPieces);
+    hamburgerPieces.forEach((piece) => {
+      piece.classList.toggle("bg-black");
+      piece.classList.toggle("bg-white");
+    });
+  }
+
   return (
     <button
       className={
         "hamburger-button flex flex-col gap-1 w-10 z-50 p-2 rounded-md transition-all duration-1000 lg:hidden " +
         className
       }
+      onClick={handleHamburgerButtonClick}
     >
       <div className="w-full h-1 bg-black rounded-full"></div>
       <div className="w-full h-1 bg-black rounded-full"></div>

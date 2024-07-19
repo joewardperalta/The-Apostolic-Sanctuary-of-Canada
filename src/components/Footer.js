@@ -69,6 +69,7 @@ export default function Footer() {
                 <Link
                   className="bg-white p-1.5 inline-block rounded-full"
                   href={social.href}
+                  target="_blank"
                 >
                   <Image
                     src={social.img.src}

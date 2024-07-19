@@ -29,7 +29,7 @@ export default function Contact() {
               <form className="space-y-7 text-[#333]">
                 <div className="flex gap-10">
                   <div className="w-full flex flex-col gap-3">
-                    <label className="font-bold" for="firstname">
+                    <label className="font-bold" htmlFor="firstname">
                       First name
                     </label>
                     <input
@@ -41,7 +41,7 @@ export default function Contact() {
                     />
                   </div>
                   <div className="w-full flex flex-col gap-3">
-                    <label className="font-bold" for="lastname">
+                    <label className="font-bold" htmlFor="lastname">
                       Last name
                     </label>
                     <input
@@ -55,7 +55,7 @@ export default function Contact() {
                 </div>
 
                 <div className="w-full flex flex-col gap-3">
-                  <label className="font-bold" for="email">
+                  <label className="font-bold" htmlFor="email">
                     Email
                   </label>
                   <input
@@ -68,7 +68,7 @@ export default function Contact() {
                 </div>
 
                 <div className="w-full flex flex-col gap-3">
-                  <label className="font-bold" for="phoneNumber">
+                  <label className="font-bold" htmlFor="phoneNumber">
                     Phone number
                   </label>
                   <input
@@ -81,7 +81,7 @@ export default function Contact() {
                 </div>
 
                 <div className="w-full flex flex-col gap-3">
-                  <label className="font-bold" for="message">
+                  <label className="font-bold" htmlFor="message">
                     Message
                   </label>
                   <textarea

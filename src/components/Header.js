@@ -52,7 +52,7 @@ export default function Header() {
           <NavbarBrand>
             <Link href="/">
               <Image
-                src="/church-logo.png"
+                src="/images/church-logo.png"
                 width={130}
                 height={130}
                 alt="church logo"

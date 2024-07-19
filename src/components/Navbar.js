@@ -4,7 +4,7 @@ export function Navbar({ children, className = "" }) {
   return (
     <nav
       className={
-        "navbar sticky left-0 top-0 py-3 w-full bg-white z-10 " + className
+        "navbar sticky left-0 top-0 py-3 w-full bg-white z-50 " + className
       }
     >
       {children}
@@ -20,7 +20,7 @@ export function Nav({ children, className = "" }) {
   return (
     <ul
       className={
-        "nav fixed w-full left-full flex flex-col items-center justify-center h-full text-2xl font-medium gap-3 transition-all duration-1000 lg:relative lg:left-0 lg:flex-row lg:w-fit lg:text-base " +
+        "nav fixed w-full left-full flex flex-col items-center justify-center h-full text-2xl font-medium gap-3 transition-all duration-1000 bg-white z-40 lg:relative lg:left-0 lg:flex-row lg:w-fit lg:text-base " +
         className
       }
     >
@@ -72,7 +72,7 @@ export function HamburgerButton({ className, onClick }) {
   return (
     <button
       className={
-        "hamburger-button flex flex-col gap-1 w-10 z-10 p-2 rounded-md transition-all duration-1000 lg:hidden " +
+        "hamburger-button flex flex-col gap-1 w-10 z-50 p-2 rounded-md transition-all duration-1000 lg:hidden " +
         className
       }
       onClick={handleHamburgerButtonClick}

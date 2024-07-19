@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 
 export function Navbar({ children, className = "" }) {
@@ -37,7 +38,7 @@ export function NavItem({ children, className = "" }) {
   );
 }
 
-export function NavLink({ children, href, className = "", onClick }) {
+export function NavLink({ children, href, className = "", onClick, id }) {
   return (
     <Link
       className={
@@ -45,37 +46,20 @@ export function NavLink({ children, href, className = "", onClick }) {
         className
       }
       href={href}
-      onClick={(e) => onClick(e)}
+      id={id}
     >
       {children}
     </Link>
   );
 }
 
-export function HamburgerButton({ className, onClick }) {
-  function handleHamburgerButtonClick() {
-    const nav = document.querySelector(".nav");
-    nav.classList.toggle("left-full");
-    nav.classList.toggle("left-0");
-
-    const hamburgerButton = document.querySelector(".hamburger-button");
-    hamburgerButton.classList.toggle("bg-black");
-
-    const hamburgerPieces = document.querySelectorAll(".hamburger-button div");
-    console.log(hamburgerPieces);
-    hamburgerPieces.forEach((piece) => {
-      piece.classList.toggle("bg-black");
-      piece.classList.toggle("bg-white");
-    });
-  }
-
+export function HamburgerButton({ className }) {
   return (
     <button
       className={
         "hamburger-button flex flex-col gap-1 w-10 z-50 p-2 rounded-md transition-all duration-1000 lg:hidden " +
         className
       }
-      onClick={handleHamburgerButtonClick}
     >
       <div className="w-full h-1 bg-black rounded-full"></div>
       <div className="w-full h-1 bg-black rounded-full"></div>

@@ -13,8 +13,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect } from "react";
 import { Button, ButtonPrimary, ButtonSecondary } from "./Button";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const path = usePathname();
+
   const navItems = [
     {
       text: "Home",
@@ -41,14 +44,11 @@ export default function Header() {
   useEffect(() => {
     // Add active class on the first nav item
     const navLinks = document.querySelectorAll(".nav-link");
-    navLinks[0].classList.add("active");
-  });
-
-  function handleNavLinkClick(e) {
-    const navLinks = document.querySelectorAll(".nav-link");
     navLinks.forEach((link) => link.classList.remove("active"));
-    e.target.classList.add("active");
-  }
+    navLinks.forEach((link) => {
+      path == link.id ? link.classList.add("active") : "";
+    });
+  });
 
   return (
     <Navbar>
@@ -64,13 +64,13 @@ export default function Header() {
               ></Image>
             </Link>
           </NavbarBrand>
-          <HamburgerButton></HamburgerButton>
+          <HamburgerButton />
         </div>
 
         <Nav>
           {navItems.map((item) => (
             <NavItem key={item.text}>
-              <NavLink href={item.href} onClick={handleNavLinkClick}>
+              <NavLink href={item.href} id={item.href}>
                 {item.text}
               </NavLink>
             </NavItem>

@@ -7,6 +7,7 @@ import { Card, CardDescription, CardImage, CardTitle } from "@/components/Card";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import NoEventsPlaceholder from "@/components/NoEventsPlaceholder";
 
 export default function Home() {
   const departments = [
@@ -212,7 +213,8 @@ export default function Home() {
             </div>
 
             <div>
-              <div className="h-[40rem] bg-[#333] rounded-md"></div>
+              <NoEventsPlaceholder className="pb-0 pt-0" />
+              {/* <div className="h-[40rem] bg-[#333] rounded-md"></div> */}
             </div>
           </Container>
         </Section>

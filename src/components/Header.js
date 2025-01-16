@@ -52,6 +52,7 @@ export default function Header() {
           <NavbarBrand>
             <Link href="/">
               <Image
+                className="md:w-48"
                 src="/images/church-logo.png"
                 width={160}
                 height={160}

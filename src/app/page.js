@@ -92,7 +92,10 @@ export default function Home() {
                 livestream, please tap or click the link below.
               </Subtitle>
 
-              <Link href="https://www.youtube.com/@theapostolicsanctuaryofcan4004">
+              <Link
+                href="https://www.youtube.com/@theapostolicsanctuaryofcan4004"
+                target="_blank"
+              >
                 <Image
                   className="w-16 h-16"
                   src="/icons/youtube_red.png"

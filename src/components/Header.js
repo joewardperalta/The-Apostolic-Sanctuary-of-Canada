@@ -53,8 +53,8 @@ export default function Header() {
             <Link href="/">
               <Image
                 src="/images/church-logo.png"
-                width={130}
-                height={130}
+                width={160}
+                height={160}
                 alt="church logo"
               ></Image>
             </Link>

@@ -82,33 +82,40 @@ export default function Home() {
         >
           <Container>
             <div className="max-w-[35rem] pt-52 pb-16">
-              <Title className="text-white">Oneness Apostolic</Title>
+              <Title className="text-white">
+                Welcome to the sanctuary online
+              </Title>
 
               <Subtitle className="text-white mb-12">
-                Join the Apostolic Sanctuary of Canada: a church committed to
-                bringing the whole gospel to the whole world.
+                We are glad you have shown interest in us. Please view our
+                Online Services through our YouTube channel were we host our
+                livestream, please tap or click the link below.
               </Subtitle>
 
-              <ButtonSecondary className="mr-5 mb-3 lg:mb-0">
-                <Link href="/location">Join our church</Link>
-              </ButtonSecondary>
-
-              <ButtonSecondary>
-                <Link href="/about">Learn who we are</Link>
-              </ButtonSecondary>
+              <Link href="/location">
+                <Image
+                  className="w-16 h-16"
+                  src="/icons/youtube_red.png"
+                  width={600}
+                  height={600}
+                  alt="Youtube icon in color red"
+                />
+              </Link>
             </div>
           </Container>
         </Section>
 
         <Section id="#about-section">
           <Container>
-            <Heading className="text-[#333]">Learn about us</Heading>
+            <Heading className="text-[#333]">A little bit about us</Heading>
 
             <div className="max-w-[50rem] mb-10">
               <p className="text-[#333]">
-                We are a Filipino Pentecostal Church and our mission is to Carry
-                out the Commission of our Lord Jesus Christ; to preach, teach
-                and make disciples; to serve and help our communities through
+                We are a predominantly Filipino congregation located in North
+                York and have been together since 1998. We are a part of the
+                Worldwide Pentecostal Fellowship and our mission is to Carry out
+                the Commission of our Lord Jesus Christ; to preach, teach and
+                make disciples; to serve and help our communities through
                 various ministries and programs; to be the modern day disciples
                 and apostles of our Lord Jesus Christ to carry the Gospel to all
                 nations and people.

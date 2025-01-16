@@ -9,16 +9,16 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Apostolic Sanctuary of Canada",
+  title: "Welcome to the sanctuary online",
   description:
-    "Apostolic Sanctuary of Canada is a apostolic pentecostal oneness church.",
+    "We are glad you have shown interest in us. Please view our Online Services through our YouTube channel were we host our livestream, please tap or click the link below.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/images/church-logo.png" sizes="any" />
+        <link rel="icon" href="/images/church Logo Solid.jpg" sizes="any" />
       </head>
       <body className={poppins.className}>{children}</body>
     </html>
